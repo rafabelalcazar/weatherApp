@@ -7,7 +7,7 @@ import city from "../../assets/img/city.jpg";
 
 getImage = weather => {
   switch (weather) {
-    case "Cloud":
+    case "Clouds":
       return cloud;
       break;
     case "Rain":
@@ -25,7 +25,7 @@ getImage = weather => {
 
 export default function ImageBack(props) {
   return (
-    <ImageBackground blurRadius={1} source={getImage(props.weather)} style={styles.container}>
+    <ImageBackground blurRadius={0} source={getImage(props.weather)} style={styles.container}>
       {props.children}
     </ImageBackground>
   );
